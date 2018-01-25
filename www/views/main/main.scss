@@ -1,0 +1,33 @@
+
+.main {
+  .scroll {
+    height: calc(100% - 48px);
+  }
+  //.list-side {
+  //  max-height: calc(100% - 100px);
+  //
+  //}
+  md-list {
+    max-height: calc(100% - 150px);
+    height: calc(100% - 150px);
+    min-height: calc(100% - 150px);
+    overflow-y: auto;
+
+  }
+  .buttons-side {
+    height: 100px;
+    min-height: 100px;
+    width: 100%;
+    md-button, button, a {
+      width: 70%;
+    }
+  }
+
+  md-list-item {
+    color: #212121;
+    border-bottom: 1px solid #212121;
+    width: 80%;
+    padding-left: 8px;
+
+  }
+}

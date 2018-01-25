@@ -1,0 +1,24 @@
+<ion-view cache-view="false" class="kriterien" view-title="{{vm.selectedKriterien.question}}">
+    <ion-content layout-fill layout="column" layout-align="space-around center">
+        <h3>{{vm.selectedKriterien.question}}</h3>
+        <div style="height: 62px;">
+            <h4 ng-if="!vm.selectedKriterien.data">Bitte Nummernschild mit minus- und Leerzeichen eingeben: AB-CD 1234</h4>
+        </div>
+
+        <div layout="column" layout-align="center center" class="data answer-side">
+            <md-input-container>
+                <label></label>
+                <input ng-change="vm.selectedKriterien.data = vm.changeToUpperCase(vm.selectedKriterien.data)"
+                       ng-pattern="'^[a-zA-Z]{1,2}-[a-zA-Z]{1,2} [0-9]{1,4}$'"
+                       style="text-transform: uppercase;"
+                       ng-model="vm.selectedKriterien.data">
+            </md-input-container>
+            <md-button ng-disabled="!vm.selectedKriterien.data" class="md-raised md-warn"
+                       ng-click="vm.acceptAnswer('Ja')">
+                Weiter
+            </md-button>
+        </div>
+
+
+    </ion-content>
+</ion-view>

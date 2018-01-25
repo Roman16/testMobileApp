@@ -1,0 +1,18 @@
+<ion-view class="dashboard" view-title="Departure Control App">
+    <ion-content layout-fill>
+
+        <div layout-fill layout="column" layout-align="space-around center">
+            <div layout="column" layout-align="center center">
+                <img src="img/logo2.jpg" alt="">
+
+                <h3 style="padding: 8px 16px; text-align: center;">Die Applikation zur
+                    rechtssicheren Verladung.</h3>
+            </div>
+
+            <div style="height: 200px;" class="buttons-side"  layout="column" layout-align="end center">
+                <md-button md-colors="{background: 'grey-700'}" ng-click="vm.logout()" class="log-out zur-liste md-raised md-primary">{{vm.user.name}}, Log out</md-button>
+                <md-button md-colors="{background: 'grey-700'}" ui-sref="app.main" class="log-out zur-liste md-raised md-primary">Zur DC-Liste</md-button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+.shipper-signature {
+
+  .scroll {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h3 {
+    text-align: center;
+  }
+
+  .answer-side {
+    height: 60%;
+    width: 100%;
+
+    button, md-button, .md-button {
+      width: 70%;
+    }
+
+    .signature-side {
+      width: 85%;
+      #shipper-signature, #loader-signature {
+        border: 1px solid #000;
+        canvas {
+          height: 150px !important;
+        }
+      }
+    }
+  }
+
+}

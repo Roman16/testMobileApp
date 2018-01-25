@@ -1,0 +1,38 @@
+.repeat-kriterien {
+
+  .scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h3 {
+    text-align: center;
+  }
+
+  .answer-side {
+    height: 50%;
+    width: 70%;
+
+    button, choose-file-button, md-button {
+      width: 100%;
+    }
+    &.signature {
+
+      height: 70%;
+      width: 100%;
+
+      button {
+        width: 70%;
+      }
+    }
+
+
+  }
+  .data {
+    md-input-container {
+      //width: 70%;
+    }
+  }
+
+}

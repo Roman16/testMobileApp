@@ -1,0 +1,33 @@
+<ion-view class="signup">
+    <ion-content>
+        <p class="title">
+            Registration
+        </p>
+        <form>
+            <md-input-container class="md-block" flex>
+                <!--<md-icon md-font-icon="fa fa-phone fa-2x" aria-hidden="true"></md-icon>-->
+                <input ng-model="vm.data.username" type="number" maxlength="11" placeholder="Username">
+            </md-input-container>
+            <md-input-container class="md-block" flex>
+                <!--<md-icon md-font-icon="fa fa-lock fa-2x" aria-hidden="true"></md-icon>-->
+                <input ng-model="vm.data.password" type="text" placeholder="Password">
+            </md-input-container>
+            <md-input-container class="md-block" flex>
+                <md-icon md-font-icon="fa fa-lock fa-2x" aria-hidden="true"></md-icon>
+                <input ng-model="vm.data.rpassword" type="text" placeholder="Confirm password">
+            </md-input-container>
+        </form>
+        <div layout="column" layout-margin>
+            <md-button class="md-primary md-raised waves-effect waves-light"
+                       md-colors="{background: 'grey-700'}"
+                       ng-click="vm.login()"
+                       aria-label="true">
+                Save
+            </md-button>
+        </div>
+        <div class="link">
+            Already has an account?
+            <a href="#/login">Log in</a>
+        </div>
+    </ion-content>
+</ion-view>

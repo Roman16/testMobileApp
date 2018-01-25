@@ -1,0 +1,37 @@
+<ion-view cache-view="false" class="kriterien" view-title="<div class='layout-align-space-between layout-row' ><span style='max-width: 250px;
+    text-overflow: ellipsis;
+    overflow: hidden;'>{{vm.selected_audit.type}}</span>  <span style='font-size: 10pt;'>Frage {{vm.step + 1}} / {{vm.kriterien.length}}</span></div>">
+    <ion-content layout-fill layout="column" layout-align="space-around center">
+        <h3>{{vm.selectedKriterien.question}}</h3>
+        <div class="answer-side buttons" layout="column" layout-align="center center"
+             ng-if="vm.selectedKriterien.process_type === 2">
+            <md-button md-colors="{background: 'green-600'}" class="md-raised " ng-click="vm.acceptAnswer('Ja', 'Ja')">
+                Ja
+            </md-button>
+            <md-button class="md-raised md-warn" ng-click="vm.acceptAnswer('Nein', 'Nein')">Nein</md-button>
+        </div>
+        <div layout="column" layout-align="center center" class="answer-side data"
+             ng-if="vm.selectedKriterien.process_type === 1">
+            <md-input-container>
+                <label></label>
+                <textarea ng-model="vm.selectedKriterien.data" md-maxlength="75" rows="2" md-select-on-focus></textarea>
+            </md-input-container>
+            <md-button class="md-raised md-primary" ng-disabled="!vm.selectedKriterien.data"
+                       ng-click="vm.acceptAnswer('Ja', 'Bestätigung')">Weiter
+            </md-button>
+
+        </div>
+        <div layout="column" layout-align="center center" class="answer-side photo"
+             ng-init="vm.selectedKriterien.photo = []"
+             ng-if="vm.selectedKriterien.process_type === 3">
+            <!--<input type="file" onchange="angular.element(this).scope().vm.previewFile(this)"><br>-->
+            <!--<img src="" height="200" alt="Image preview...">-->
+
+            <md-button ng-click="vm.capturePhoto()" aria-label="Upload photo" class="md-raised"  md-colors="{background: 'green-600'}">
+            Foto machen
+            </md-button>
+            <md-button ng-disabled="!vm.selectedKriterien.photo.length" class="md-raised md-warn" ng-click="vm.acceptAnswer('Ja', 'Bestätigung')">Weiter</md-button>
+
+        </div>
+    </ion-content>
+</ion-view>

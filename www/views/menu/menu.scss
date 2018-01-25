@@ -1,0 +1,21 @@
+.menu {
+    .scroll {
+        height: calc(100% - 48px);
+    }
+    background-color: #303030;
+    ion-item,
+    ion-item.activated
+    {
+        color: white;
+        background-color: #303030;
+        border-top: 1px solid black;
+        border-bottom: 2px solid black;
+        &:first-of-type {
+            border-top: none;
+        }
+        .icon {
+            font-size: 1em;
+            color: #ccc;
+        }
+    }
+}

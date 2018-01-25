@@ -1,0 +1,23 @@
+<ion-view cache-view="false" class="shipper-signature" view-title=" {{vm.selectedKriterien.question}}">
+    <ion-content layout-fill layout="column" layout-align="space-around center">
+        <h3>{{vm.selectedKriterien.question}}</h3>
+        <!--<signature layout="column" layout-align="center center"></signature>-->
+        <div layout="column" layout-align="center center" class="data answer-side">
+            <h4  ng-if="!vm.isGetSignature">Bitte unterschreiben! </h4>
+            <div class="signature-side">
+                <div ng-click="vm.isGetSignature = false" style="margin-bottom:8px;" layout="row" layout-align="end" id="shipper-tools"></div>
+                <div id="shipper-signature"></div>
+            </div>
+
+            <md-button class="md-raised"  md-colors="{background: 'green-600'}"
+                       ng-click="vm.acceptAnswer('Nein')">
+                Abgelehnt
+            </md-button>
+            <md-button class="md-raised md-warn"
+                       ng-disabled="!vm.isGetSignature"
+                       ng-click="vm.acceptAnswer('Ja')">
+                Weiter
+            </md-button>
+        </div>
+    </ion-content>
+</ion-view>

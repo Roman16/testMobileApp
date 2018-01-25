@@ -1,0 +1,24 @@
+<ion-view cache-view="false" class="reference-page" view-title="{{vm.selected_audit.type}}">
+    <ion-content flex layout="column" layout-align="space-around center">
+        <form name="vm.form" novalidate ng-submit="vm.goToKriterien()" flex layout-fill layout="column" layout-align="space-around center">
+            <div layout="column" layout-align="start center">
+                <h3>Referenz eingeben</h3>
+                <md-input-container>
+                    <label style="display: none;" for=""></label>
+                    <input id="name" name="name" ng-required="true" ng-model="vm.audit.name" type="text">
+                </md-input-container>
+                <div ng-messages="vm.form.name.$error" role="alert" multiple>
+                    <div ng-message="required">
+                        <p style="text-align: center; color: red;" >Bitte beliebige Referenz eingeben</p>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%;" layout="column" layout-align="start center">
+                <md-button type="submit" md-colors="{background: 'grey-700'}"
+                           class="start-dc md-raised md-primary">Start DC</md-button>
+                <md-button ui-sref="app.main" md-colors="{background: 'grey-700'}"
+                           class="start-dc md-raised md-primary">Zurück</md-button>
+            </div>
+        </form>
+   </ion-content>
+</ion-view>

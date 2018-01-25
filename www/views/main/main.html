@@ -1,0 +1,21 @@
+<ion-view cache-view="false" class="main" view-title="DC-Liste">
+    <ion-content>
+        <div style="height: 100%;" layout="column" layout-align="space-between">
+                <p style="padding-left: 8px; font-size: 12pt; margin-top: 0;background: gainsboro;">Bitte wählen Sie eine Vorlage für die bevorstehende Kontrolle.</p>
+                <md-list style="overflow-y: auto" layout="column" layout-align="start center" ng-cloak>
+                    <md-list-item ng-click="vm.toReferenz(audit)"  class="audit-item" ng-repeat="audit in vm.audits">
+                        {{audit.type}}
+                    </md-list-item>
+                </md-list>
+
+            <div class="buttons-side" layout="column" layout-align="start center">
+                <md-button type="submit" md-colors="{background: 'grey-700'}"
+                           ng-click="vm.refreshList()"
+                           class="md-raised md-primary">LISTE AKTUALISIEREN</md-button>
+                <md-button ui-sref="app.dashboard" md-colors="{background: 'grey-700'}"
+                           class="start-dc md-raised md-primary">Zurück</md-button>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+.dashboard {
+  .scroll {
+    height: calc(100% - 48px);
+  }
+  img {
+    width: 70%;
+  }
+
+  .buttons-side {
+    width: 100%;
+    .log-out, .zur-liste {
+      width: 70%;
+      min-width: 70%;
+    }
+  }
+
+}

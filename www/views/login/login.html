@@ -1,0 +1,51 @@
+<ion-view class="login">
+    <ion-content>
+
+        <div style="margin: 0; width: 100%; min-height: calc(100% + 43px); height: calc(100% + 43px);" layout="column"
+             layout-align="space-around">
+            <div layout="row" layout-align="center center">
+                <img src="img/logo2.jpg" alt="">
+            </div>
+
+            <form ng-if="vm.showLogIn" style="height: 200px;">
+                <md-input-container class="md-block" flex>
+                    <!--<md-icon md-font-icon="fa fa-phone fa-2x" aria-hidden="true"></md-icon>-->
+                    <input ng-model="vm.data.username" type="text" placeholder="Username">
+                </md-input-container>
+                <md-input-container class="md-block" flex>
+                    <!--<md-icon md-font-icon="fa fa-lock fa-2x" aria-hidden="true"></md-icon>-->
+                    <input ng-model="vm.data.password" type="password" placeholder="Passwort">
+                </md-input-container>
+                <div layout="column" layout-margin>
+                    <md-button class="md-primary md-raised waves-effect waves-light"
+                               md-colors="{background: 'grey-700'}"
+                               ng-click="vm.login(vm.data)"
+                               aria-label="true">
+                        Einloggen
+                    </md-button>
+                </div>
+            </form>
+
+            <form ng-if="!vm.showLogIn" style="height: 200px;">
+                <md-input-container class="md-block" flex>
+                    <!--<md-icon md-font-icon="fa fa-phone fa-2x" aria-hidden="true"></md-icon>-->
+                    <input ng-model="vm.activation_code" type="number" placeholder="Aktivierungscode">
+                </md-input-container>
+                <div layout="column" layout-margin>
+                    <md-button class="md-primary md-raised waves-effect waves-light"
+                               md-colors="{background: 'grey-700'}"
+                               ng-disabled="!vm.activation_code"
+                               ng-click="vm.use_code(vm.activation_code)"
+                               aria-label="true">
+                        CODE ABSENDEN
+                    </md-button>
+                </div>
+            </form>
+
+            <!--<div class="link">-->
+            <!--<a ng-click="vm.reset()">Забули пароль?</a>-->
+            <!--<a ng-click="vm.signup()">Registration</a>-->
+            <!--</div>-->
+        </div>
+    </ion-content>
+</ion-view>

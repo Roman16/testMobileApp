@@ -1,0 +1,115 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+*/
+
+$light:                           #fff !default;
+
+$stable:                          #f8f8f8 !default;
+//$positive:                        #387ef5 !default;
+//$calm:                            #11c1f3 !default;
+//$balanced:                        #33cd5f !default;
+//$energized:                       #ffc900 !default;
+//$assertive:                       #ef473a !default;
+//$royal:                           #886aea !default;
+
+
+//$dark:                            #212121 !default;
+$body-color:                      #fff !default;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+ion-content {
+    background-color: $body-color;
+}
+md-input-container,
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused,
+md-input-container:not(.md-input-invalid).md-input-focused,
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-resized,
+md-input-container:not(.md-input-invalid).md-input-resized,
+md-input-container:not(.md-input-invalid).md-input-has-value,
+md-input-container:not(.md-input-invalid).md-input-has-value{
+    margin: 0;
+    md-icon {
+        color: white;
+    }
+    label {
+        color: #ccc;
+        font-size: 1.2em;
+    }
+    .md-input {
+        border-bottom: 1px solid #ccc;
+        color: #ccc;
+    }
+}
+.item {
+    line-height: 1.5em;
+    background: #424242;
+    border: 1px solid #333;
+    color: white;
+}
+
+.checkProfileComplete {
+    .popup {
+        background-color: #424242;
+        color: white;
+        .popup-head {
+            border-bottom: 1px solid black;
+            .popup-title {
+                color: white;
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+        }
+        .popup-buttons {
+            min-height: 55px;
+            .button {
+                min-height: 30px;
+                &.button-positive {
+                    background-color: #797979;
+                }
+                &.button-default {
+                    background-color: #E8E8E8;
+                }
+            }
+        }
+    }
+}
+
+@import "www/views/login/login";
+@import "www/views/signup/signup";
+@import "www/views/reset_password/reset_password";
+@import "www/views/main/main";
+@import "www/views/dashboard/dashboard";
+@import "www/views/kriterien/kriterien";
+@import "www/views/reference_page/reference_page";
+@import "www/views/repeat_kriterien/repeat_kriterien";
+@import "www/views/end_step/loader_signature/loader_signature";
+@import "www/views/end_step/shipper_signature/shipper_signature";
+//@import "www/views/offer_list/offer_list";
+//@import "www/views/offer_add/offer_add";
+//@import "www/views/offer_list/image_popover/style";
+//@import "www/views/profile/profile";
+//@import "www/views/user_rating/user_rating";
+//@import "www/views/recommend/recommend";
+@import "www/views/menu/menu";
+//@import "www/views/news/news";
+//@import "www/views/news_details/news_details";
+//@import "www/views/comments/comments";
+//@import "www/views/google_map/google_map";
+
+@import "www/directive/text-overflow/text-overflow.directive";
